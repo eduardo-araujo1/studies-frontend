@@ -5,18 +5,26 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'; // Nova importação
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { CardsListComponent } from './components/cards-list/cards-list.component'; // Nova importação
+import { CommonModule } from '@angular/common';
+import { CardComponent } from './components/card/card.component';
+import { LegendComponent } from './components/legend/legend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormsComponent
+    FormsComponent,
+    CardsListComponent,
+    CardComponent,
+    LegendComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [
     provideClientHydration(),
