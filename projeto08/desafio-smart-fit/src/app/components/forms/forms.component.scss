@@ -60,6 +60,7 @@
 
 .form-group .btn-wrapper{
   display: flex;
+  flex-direction: column;
   gap: 12px;
   align-items: center;
   justify-content: center;
@@ -87,17 +88,34 @@
   border: 2px solid var(--light-text);
 }
 
-.checkbox-wrapper{
+.form-group .checkbox-wrapper{
   color: var(--light-grey);
   margin: 32px 0;
-  position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.form-group .checkbox-wrapper span{
-  position: absolute;
-  right: 0;
+.form-group .checkbox-wrapper input[type="checkbox"]{
+  margin-right: 4px;
 }
 
+@media (min-width: 768px){
+  .form-group .btn-wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-group .btn-wrapper .btn{
+    width: 25%;
+  }
+
+  .form-group .checkbox-wrapper{
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
 
 
