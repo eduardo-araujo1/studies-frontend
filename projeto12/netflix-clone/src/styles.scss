@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 @import 'ngx-toastr/toastr';
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
